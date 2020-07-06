@@ -1,0 +1,1148 @@
+% Chapter 5
+
+\chapter{Evaluation Criteria} % Write in your own chapter title
+\label{Chapter5}
+\lhead{Chapter 5. \emph{Evaluation Criteria}} % Write in your own chapter title to set the page header
+
+
+
+Here are the test cases for evaluation of the project:
+\section{Web Application}
+\subsection{Test Scenario TS-1: User Registration Functionality}
+\textbf{Post-Conditions: } User data successfully sent to admin request approval page.
+\subsubsection{\underline{Test Case TC-1: Enter all valid credentials}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid First Name, Last Name, Email, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc
+\item Last Name: xyz
+\item Email: someone@example.com (Email should be already registered on any service.)
+\item Password: abcd (At least four characters).
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-2: Enter Invalid First Name}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid First Name
+\item Enter valid Last Name, Email, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc12
+\item Last Name: xyz
+\item Email: someone@example.com (Email should be already registered on any service.)
+\item Password: abcd (At least four characters).
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-3: Enter Invalid Last Name}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Last Name
+\item Enter valid First Name, Email, Passwordand Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc
+\item Last Name: xyz12
+\item Email: someone@example.com (Email should be already registered on any service.)
+\item Password: abcd (At least four characters).
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-4: Enter Invalid Email}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Email
+\item Enter valid First Name, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc
+\item Last Name: xyz
+\item Email: someone.com (Email should be already registered on any service.)
+\item Password: abcd (At least four characters).
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-5: Enter Invalid Password}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Password.
+\item Enter valid First Name, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc
+\item Last Name: xyz
+\item Email: someone@example.com (Email should be already registered on any service.)
+\item Password: abc (At least four characters).
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-6: Enter Invalid Registration Number}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Registration Number.
+\item Enter valid First Name, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item First Name: abc
+\item Last Name: xyz
+\item Email: someone@example.com (Email should be already registered on any service.)
+\item Password: abcd (At least four characters).
+\item Registration Number: 2016-CS--1, 2016-CS-A, 2008-123-A, 2016-!A-1, 2016-!A-A, 2019-!A-£, 20!1-AB-1
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-2: User Login Functionality}
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item User is approved by the admin.
+\item User identified and authenticated.
+\item User's record is saved.
+
+\end{itemize}
+
+\textbf{Post-Conditions: } User is successfully log in to the system.
+\subsubsection{\underline{Test Case TC-1: Enter all valid credentials}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid Email and Password.
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: someone@example.com (Email should be already registered in that system.)
+\item Password: abcd (password should already registered into the system).
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-2: Enter Invalid Email}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Email
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: someone.example.com (Email should be already registered in that system)
+\item Password: abcd (password should already registered into the system).
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-3: Enter Invalid Password}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Password.
+\item Enter valid First Name, Password and Registration Number.
+\item Select a designation \& date of birth.
+\item Click on register button.
+\item Registration Number: 2016-CS-123
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: someone@example.com (Email should be already registered in that system)
+\item Password: c*d (password should already registered into the system).
+
+\end{itemize}
+
+
+
+
+\subsection{Test Scenario TS-3: Teacher's Request Approval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the teacher.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the teacher.
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the approve button.
+\item Approval email is sent to the user.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-4: Teacher's Request Disapproval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the teacher.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is disapproved by system and disapproval email is sent to the teacher. 
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the disapprove button.
+\item Disapproval email is sent to the user.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-5: Students' Request Approval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the student.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the student. 
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the approve button.
+\item Approval email is sent to the user.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-6: Students' Request Disapproval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the student.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the teacher. 
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the disapprove button.
+\item Disapproval email is sent to the user.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-7: Add Course Functionality}
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is successfully added into system.
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-1: Enter all valid data}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid Course Name and Course Code.
+\item Click on Add Course button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC (course name should contain only alphabets)
+\item Course Code: 201 (Course code should be unique and not already registered in the system)
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-2: Enter Invalid Course Name}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Course Name.
+\item Click on Add Course button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC12 (course name should contain only alphabets)
+\item Course Code: 201 (Course code should be unique and not already registered in the system)
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-3: Enter Invalid Course Code}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Course Code.
+\item Enter valid Course Name.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC (course name should contain only alphabets)
+\item Course Code: 2B1 (Course code should be unique and contains only numbers)
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-8: Update Course Functionality}
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is successfully updated.
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-1: Enter all valid data}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid Course Name and Course Code.
+\item Click on Add Course button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC (course name should contain only alphabets)
+\item Course Code: 201 (Course code should be unique and contains only digits.)
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-2: Enter Invalid Course Name}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Course Name.
+\item Click on Add Course button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC12 (course name should contain only alphabets)
+\item Course Code: 201 (Course code should be unique)
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-3: Enter Invalid Course Code}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid Course Code.
+\item Enter valid Course Name.
+\item Click on the Add Course Button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Course name: ABC (course name should contain only alphabets)
+\item Course Code: 2B1 (Course code should be unique and contains only numbers)
+
+\end{itemize}
+
+\subsection{Test Scenario TS-9: Course Deletion Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Course must be added successfully.
+
+\end{itemize}
+
+\textbf{Post-Conditions: } 
+\begin{itemize}
+\item Course details are successfully deleted from the system.
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the delete button.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-10: View Course Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged into the system.
+\item User is identified and authenticated.
+\item Course must be added successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course details are viewed.
+\end{itemize}
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the View button.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-11: Upload Course Assignment Functionality}
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Teacher is logged into the system.
+\item Admin is identified and authenticated.
+\item Course is added in the system.
+\item Course is assigned to that teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: } 
+\begin{itemize}
+\item Course assignment is uploaded successfully updated.
+\end{itemize}
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Upload assignment file.
+\item Click on Upload Assignment button.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-12: Downloading Assignment Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged into the system.
+\item User is identified and authenticated.
+\item Assignment must be uploaded successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Assignment is downloaded successfully.
+\end{itemize}
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the download button.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-13: View Assignment Functionality}
+\textbf{Preconditions:}
+\begin{itemize}
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Student is enrolled in that course.
+\item Course is assigned to teacher.
+\end{itemize}
+\textbf{Post Condition: }
+\begin{itemize}
+\item Course Assignment viewed successfully.
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the download button.
+
+\end{itemize}
+
+\subsection{Test Scenario TS-14: Assignment Deletion Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged into the system.
+\item Teacher is identified and authenticated.
+\item Assignment must be uploaded successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Assignment is deleted successfully.
+\end{itemize}
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on the delete button.
+
+\end{itemize}
+
+
+
+
+
+
+\subsection{Test Scenario TS-15: Add Course Announcement Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item Teacher is identified and authenticated.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course Announcement is added successfully.
+
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to announcements tab.
+\item Click on Add Announcement button.
+\item Enter text for announcement.
+\item Click on add button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-16: Edit Course Announcement Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course Announcement is updated successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to announcements tab.
+\item Click on edit button.
+\item Update the announcement.
+\item Click on save button.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-17: Delete Course Announcement Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course announcement is deleted successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to announcements tab.
+\item Click on delete button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-18: Students Assignment Submission Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Student is enrolled in that course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Assignment is submitted successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Click on submit link in front of particular assignment.
+\item Select assignment file from device.
+\item Click on submit button.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-19: Upload Course Notes Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes uploaded successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Click on upload notes button.
+\item Select notes file from device.
+\item Click on upload button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-20: View Course Notes Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Student is enrolled in that course.
+\item Course is assigned to teacher.
+\item Course Notes are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes viewed successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to notes tab to all notes in a list.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-21: Download Course Notes Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+\item Student is enrolled in that course.
+\item Course notes are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes downloaded successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to notes tab.
+\item Click on download button in front of the notes in table.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-22: Delete Course Notes Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+\item Course lectures are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course lectures deleted successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to particular course.
+\item Go to notes tab.
+\item Click on delete button in front of the notes in table.
+
+\end{itemize}
+
+
+
+
+\subsection{Test Scenario TS-23: Student Enrolment in Course Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Course must be added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment request sent to the teacher successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to all courses page.
+\item Click on enrol button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-24: Course Enrolment Requests Disapproval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment requests are approved.
+\item On disapproval email is sent to the student.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to the particular course.
+\item Click on see enrolment requests button.
+\item Click on disapprove button to disapprove each student.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-25: Course Enrolment Requests Approval Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment requests are approved.
+\item On approval email is sent to the student.
+\item Students can view course details.
+
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to the particular course.
+\item Click on see enrolment requests button.
+\item Click on approve button to approve each student.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-26: Assign Courses Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged in the system.
+\item User is identified and authenticated.
+\item Courses must be added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is assigned successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to the assigned courses link.
+\item Select teacher from the dropdown.
+\item Select course from dropdown.
+\item Click on assign course button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-27: View Students' Assignments Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+\item Course assignments uploaded.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Students assignments viewed successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to the particular course assigned to teacher.
+\item Click on all submitted assignments link to see all students assignments.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-28: Download Students' Assignments Functionality}
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+\item Students have submitted the assignments.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Teacher downloaded the assignments successfully.
+
+\end{itemize}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on download link in front of students' registration number.
+
+\end{itemize}
+
+\section{Offline Player Application}
+\subsection{Test Scenario TS-1: User Authentication Functionality}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item User data successfully sent to server and token successfully saved in local database.
+\end{itemize}
+\subsubsection{\underline{Test Case TC-1: Enter Valid Credentials}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid email.
+\item Enter valid password.
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: abc@gmail.com
+\item Password: abcd
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-2: Enter Invalid Email}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid email.
+\item Enter valid password.
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: abc.com
+\item Password: abcd
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-3: Enter Invalid Password}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter valid email.
+\item Enter invalid password.
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: abc@gmail.com
+\item Password: abc
+
+\end{itemize}
+
+\subsubsection{\underline{Test Case TC-4: Enter All Invalid Credentials}}
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Enter invalid email.
+\item Enter invalid password.
+\item Click on login button.
+
+\end{itemize}
+
+\textbf{Test Data:}
+\begin{itemize}
+
+\item Email: abc.com
+\item Password: abc
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-2: View Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item All the downloaded and recently fetched lectures from website are shown in lecture play list.
+
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to play list page.
+\item Click fetch lectures button.
+
+\end{itemize}
+
+
+
+\subsection{Test Scenario TS-3: Play Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item All the downloaded and recently fetched lectures from website are shown in lecture play list.
+
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to play list page.
+\item Click on play button and player screen will open.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-4: Download Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Lecture is downloaded
+
+\end{itemize}
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Go to play list page.
+\item Click on download button.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-5: View About Page Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on about tab.
+
+\end{itemize}
+
+
+\subsection{Test Scenario TS-6: View Contact Us Page Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+
+\textbf{Test Steps:}
+\begin{itemize}
+
+\item Click on Contact Us tab.
+
+\end{itemize}
+

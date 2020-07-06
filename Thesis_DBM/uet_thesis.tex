@@ -1,0 +1,201 @@
+%% ----------------------------------------------------------------
+%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% ---------------------------------------------------------------- 
+
+% Set up the document
+\documentclass[a4paper, 12pt, oneside]{uet_thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+
+% Include any extra LaTeX packages required
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+
+\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{tabularx}
+%\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+
+\usepackage{url}
+\usepackage{natbib}
+
+
+% for horizontal table 
+\usepackage{booktabs}
+
+
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+
+% remove the unnecessary spacing before and after the headings/subheadings
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\setlength{\parskip}{6pt}
+%\setlength{\parsep}{0pt}
+%\setlength{\headsep}{0pt}
+%\setlength{\topskip}{0pt}
+
+%% ----------------------------------------------------------------
+\begin{document}
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+
+% Set up the Title Page
+\title  {Digital Board Marker (Storage Efficient System for Class Lectures)}
+\session {2016 -- 2020}
+\advisor {Samyan Qayyum Wahla}
+\authors {  % please enter the students names and registration numbers
+Muhammad Haris Khan \quad 2016-CS-105 \\Hamza Farooq  \quad 2016-CS-122 \\Ayesha Atif\quad 2016-CS-152 \\Komal Shehzadi \quad 2016-CS-178 }
+
+\addresses  {\deptname \\ \univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\date       {\today}
+\subject    {}
+\keywords   {}
+
+\maketitle
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+\rhead{\thepage}  % Sets the right side header to show the page number
+\lhead{}  % Clears the left side page header
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+
+%% Select only one of the certification pages  
+%\CertificationMSc{}
+%\CertificationBSc{}
+\clearpage  % Certification ended, now start a new page
+
+
+%% ----------------------------------------------------------------
+% Declaration Page required for the Thesis, your institution may give you a different text to place here
+\Declaration{
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+We declare that the work contained in this thesis is our own, except where explicitly stated otherwise. In addition this work has not been submitted to obtain another degree or professional qualification.
+
+\bigskip
+
+Signed:~~ \rule[0em]{10em}{1.0pt} \\ % This prints a line for the signature 
+Date:~~~~ \rule[0em]{10em}{1.0pt}  % This prints a line to write the date
+}
+\clearpage     % Declaration ended, now start a new page
+
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+% The Acknowledgements page, for thanking everyone
+\acknowledgements{
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+First of all, we wish to thank Almighty Allah for giving us strength in fulfilling this work. It gives us great pleasure to express our deep sense of gratitude and respect to our supervisor, Sir Samyan Qayyum Wahla, for boasting our confidence and a sense of excitement and inspiring us in our work through his guidance. Our sincere thanks to him for his valuable suggestions and efforts. It is with great pride and pleasure that we submit this dissertation as his students. Lastly we would like to thank our parents for their unconditional, love, affection, kind cooperation and encouragement.
+
+}
+\clearpage  % End of the Acknowledgements
+
+%% ----------------------------------------------------------------
+% End of the pre-able, contents and lists of things
+% Begin the Dedication page
+\setstretch{1.3}  % Return the line spacing back to 1.3
+\pagestyle{empty}  % Page style needs to be empty for this page
+\dedicatory{To out parents and respected members}
+
+
+%% ----------------------------------------------------------------
+\pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+%% ----------------------------------------------------------------
+\lhead{\emph{Contents}}  % Set the left side page header to "Contents"
+\tableofcontents  % Write out the Table of Contents
+
+%% ----------------------------------------------------------------
+\lhead{\emph{List of Figures}}  % Set the left side page header to "List if Figures"
+\listoffigures  % Write out the List of Figures
+
+%% ----------------------------------------------------------------
+\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+\listoftables  % Write out the List of Tables
+
+%% ----------------------------------------------------------------
+\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+\clearpage  % Start a new page
+\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+{
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+}
+
+%% ----------------------------------------------------------------
+% The Abstract Page
+\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
+\abstract{
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+Digital Board Marker is an innovation through technology which focuses on reduction of resource usage. The system records and live stream the lecture by using the minimal resources. In Particular, usage of storage media and communication media is enhanced so that recording and live streaming of lecture seems to be one hundred times more resource efficient as compared to regular video lectures. Learning management system is implemented and lectures are managed on it. Class instructors, students, sketch artists and online lecturers are the end users of digital board marker. What makes this project unique is, it does not record the video from camera, it does not compress the video so no compromise on quality, it does not implement any physical touchpad that makes it ultradurable because no physical contact with system.\\
+Methodology and general diagrams as per module explain that how a particular module will be developed, where to start and working conditions at top level. Methodology used to develop a project module, necessary design tools and essentials, pre-requisites in terms of tool and logic required are discussed. Entity relationship diagram shows the relationships among entity blocks that are related in a database. Database diagram represents skeleton structure that exhibits the logical view of the entire database.\\
+Implementation details are about the actual tools and techniques used to develop the project. Project structure depicts that how each module in the project is related to another module on actual interaction level. Requirements of a module tells us what a module is supposed to do. General flow is described in descriptive format. Detail of hardware and software components used in the project are detailed. Circuit and schematic diagram of hardware modules give the idea of physical linkage of components at electronic level. General flow diagram explains the general working of the module. Rules and assumptions that must be true while normal usage of each module is addressed.\\
+Evaluation criteria explains the conditions and test cases that are used to evaluate overall project. Each test case has some pre-conditions, test steps and test data to evaluate in each scenario. Post condition is the verification checkpoint that must be true in order to make the system pass the test case.\\
+Results of the corresponding test cases are addressed. Pre-conditions, post-conditions, expected and actual results of each test case are explained in well-formed tabular format.\\
+Future work and scope enhancement of the project will be done by mainly using machine learning and computer vision algorithms. Use of ordinary marker instead of marker hardware. Sustainable system irrespective of board dimensions. Noise removal in audio hardware. Automatic notes generation on LMS. Recording of lectures in an uncontrolled environment. Automated google searching.
+
+}
+\clearpage  % Abstract ended, start a new page
+
+%% ----------------------------------------------------------------
+\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+\onehalfspacing
+% Include the chapters of the thesis, as separate files
+% Just uncomment the lines as you write the chapters
+
+\input{./Chapters/Chapter1} % Introduction 
+
+\input{./Chapters/Chapter2} % What to Write 
+
+\input{./Chapters/Chapter3} % Experimental Setup
+
+\input{./Chapters/Chapter4} % Experiment 1
+
+\input{./Chapters/Chapter5} % Experiment 2
+
+\input{./Chapters/Chapter6} % Results and Discussion
+
+\input{./Chapters/Chapter7} % Conclusion
+
+%% ----------------------------------------------------------------
+% Now begin the Appendices, including them as separate files
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+%\input{./Chapters/AppendixA}	% Appendix Title
+
+%\input{./Chapters/AppendixB} % Appendix Title
+
+%\input{./Chapters/AppendixC} % Appendix Title
+
+\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+\backmatter
+
+%% ----------------------------------------------------------------
+\label{References}
+\lhead{\emph{References}}  % Change the left side page header to "References"
+
+\bibliographystyle{plainnat}  % Use "unsrtnat" BibTeX style for formatting the references
+
+\bibliography{references}  % The references information are stored in the file named "references.bib"
+
+
+\end{document}  % The End
+%% ----------------------------------------------------------------

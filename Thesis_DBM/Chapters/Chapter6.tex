@@ -1,0 +1,1296 @@
+% Chapter 6
+
+\chapter{Results} % Write in your own chapter title
+\label{Chapter6}
+\lhead{Chapter 6. \emph{Results}} % Write in your own chapter title to set the page header
+
+\section{Web Application}
+\subsection{Test Scenario TS-1: User Registration Functionality}
+\textbf{Postconditions:}
+\begin{itemize}
+
+\item User data successfully sent to admin request approval page.
+
+\end{itemize}
+
+\bigskip
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Test Case Id} & \textbf{Description} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+TC-1 &
+Enter all valid credentials &
+Successful registration and pop up message "User Successfully registered" &
+Successful registration and pop up message "User Successfully registered" &
+Haris &
+Pass \\
+\hline
+
+
+% Row 2
+TC-2 &
+Enter Invalid First Name &
+Sign up button disabled &
+Sign up button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-3 &
+Enter Invalid Last Name &
+Sign up button disabled &
+Sign up button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-4 &
+Enter Invalid Email &
+Sign up button disabled &
+Sign up button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-5 &
+Enter Invalid Password &
+Sign up button disabled &
+Sign up button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-6 &
+Enter Invalid Registration Number &
+Sign up button disabled &
+Sign up button disabled &
+Haris &
+Pass \\
+\hline
+
+
+
+\caption{Web App: Test Scenario TS-1 Results}
+\end{longtable}
+
+
+
+
+\subsection{Test Scenario TS-2: User Login Functionality}
+
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item User is approved by the admin.
+\item User identified and authenticated.
+\item User's record is saved.
+
+\end{itemize}
+
+\textbf{Postconditions:}
+\begin{itemize}
+
+\item User is successfully log in to the system.
+
+\end{itemize}
+
+\bigskip
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Test Case Id} & \textbf{Description} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+TC-1 &
+Enter all valid credentials &
+Successful login &
+Successful login &
+Haris &
+Pass \\
+\hline
+
+
+% Row 2
+TC-2 &
+Enter Invalid Email &
+Login button disabled &
+Login button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-3 &
+Enter Invalid Password &
+Login button disabled &
+Login button disabled &
+Haris &
+Pass \\
+\hline
+
+
+
+
+\caption{Web App: Test Scenario TS-2 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-3: Teacher's Request Approval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the teacher.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the teacher.
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Teacher's request approved and teacher can now login &
+Teacher's request approved and teacher can now login &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-3 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-4: Teacher's Request Disapproval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the teacher.
+
+\end{itemize}
+\textbf{Post-Conditions: } 
+\begin{itemize}
+\item Request is disapproved by system and disapproval email is sent to the teacher.
+\end{itemize} 
+
+\bigskip
+\newpage
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Teacher's request disapproved and teacher cannot login &
+Teacher's request disapproved and teacher cannot login &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-4 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-5: Students' Request Approval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the student.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the student. 
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Student's request approved and student can now login &
+Student's request approved and student can now login &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-5 Results}
+\end{longtable}
+
+
+
+
+
+\subsection{Test Scenario TS-6: Students' Request Disapproval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the student.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the teacher. 
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Student's request disapproved and student cannot login &
+Student's request disapproved and student cannot login &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-6 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-7: Add Course Functionality}
+
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is successfully added into system.
+\end{itemize}
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Test Case Id} & \textbf{Description} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+TC-1 &
+Enter all valid data &
+Pop up message "Course Added Successfully" &
+Pop up message "Course Added Successfully" &
+Haris &
+Pass \\
+\hline
+
+
+% Row 2
+TC-2 &
+Enter Invalid Course Name &
+Add button disabled &
+Add button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-3 &
+Enter Invalid Course Code &
+Add button disabled &
+Add button disabled &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-7 Results}
+\end{longtable}
+
+
+
+
+\subsection{Test Scenario TS-8: Update Course Functionality}
+
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is successfully updated.
+\end{itemize}
+
+\bigskip
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Test Case Id} & \textbf{Description} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+TC-1 &
+Enter all valid data &
+Pop up message "Course Updated Successfully" &
+Pop up message "Course Updated Successfully" &
+Haris &
+Pass \\
+\hline
+
+
+% Row 2
+TC-2 &
+Enter Invalid Course Name &
+Save button disabled &
+Save button disabled &
+Haris &
+Pass \\
+\hline
+
+TC-3 &
+Enter Invalid Course Code &
+Save button disabled &
+Save button disabled &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-8 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-9: Course Deletion Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Admin is logged into the system.
+\item Admin is identified and authenticated.
+\item Registration request is sent by the student.
+
+\end{itemize}
+\textbf{Post-Conditions: } Request is approved by system and approval email is sent to the teacher. 
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Pop up message "Course deleted successfully" &
+Pop up message "Course deleted successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-9 Results}
+\end{longtable}
+
+
+
+
+\subsection{Test Scenario TS-10: View Course Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged into the system.
+\item User is identified and authenticated.
+\item Course must be added successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course details are viewed.
+\end{itemize}
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Course details page opens on View button click &
+Course details page opens on View button click &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-10 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-11: Upload Course Assignment Functionality}
+%\mbox
+\textbf{Pre-Conditions: } 
+\begin{itemize}
+
+\item Teacher is logged into the system.
+\item Admin is identified and authenticated.
+\item Course is added in the system.
+\item Course is assigned to that teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: } 
+\begin{itemize}
+\item Course assignment is uploaded successfully updated.
+\end{itemize}
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Pop up message "Course Assignment Added Successfully &
+Pop up message "Course Assignment Added Successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-11 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-12: Downloading Assignment Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged into the system.
+\item User is identified and authenticated.
+\item Assignment must be uploaded successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Assignment is downloaded successfully.
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Assignment downloaded successfully &
+Assignment downloaded successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-12 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-13: Assignment Deletion Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged into the system.
+\item Teacher is identified and authenticated.
+\item Assignment must be uploaded successfully.
+
+\end{itemize}
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Assignment is deleted successfully.
+\end{itemize}
+
+
+\bigskip
+
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Pop up message "Assignment Deleted Successfully &
+Pop up message "Assignment Deleted Successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-13 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-14: Add Course Announcement Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item Teacher is identified and authenticated.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course Announcement is added successfully.
+
+\end{itemize}
+
+
+\bigskip
+\newpage
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Announcement Added Successfully" &
+Toast message "Announcement Added Successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-14 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-15: Edit Course Announcement Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course Announcement is updated successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Announcement Updated Successfully" &
+Toast message "Announcement Updated Successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-15 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-16: Delete Course Announcement Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course announcement is deleted successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Announcement Deleted Successfully" &
+Toast message "Announcement Deleted Successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-16 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-17: Students Assignment Submission Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Student is enrolled in that course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Assignment is submitted successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Assignment Submitted Successfully &
+Toast message "Assignment Submitted Successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-17 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-18: Upload Course Notes Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes uploaded successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Notes Added Successfully" &
+Toast message "Notes Added Successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-18 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-19: View Course Notes Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Student is enrolled in that course.
+\item Course is assigned to teacher.
+\item Course Notes are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes viewed successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Notes list shown &
+Notes list shown &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-19 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-20: Download Course Notes Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+\item Student is enrolled in that course.
+\item Course notes are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course notes downloaded successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Notes file downloaded successfully &
+Notes file downloaded successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-20 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-21: Delete Course Notes Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is logged in the system.
+\item User is identified and authenticated.
+\item Course is assigned to the teacher.
+\item Course lectures are added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Course lectures deleted successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Toast message "Notes file deleted successfully" &
+Toast message "Notes file deleted successfully" &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-21 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-22: Student Enrolment in Course Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is identified and authenticated.
+\item User is logged in the system.
+\item Course must be added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment request sent to the teacher successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Student enrolment request sent to admin. &
+Student enrolment request sent to admin. &
+Haris &
+Pass \\
+
+% Row 2
+Enrol button changes to pending. &
+Enrol button changes to pending. &
+Haris &
+Pass \\
+
+\hline
+
+\caption{Web App: Test Scenario TS-22 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-23: Course Enrolment Requests Disapproval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment requests are approved.
+\item On disapproval email is sent to the student.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Disapproval mail is sent &
+Disapproval mail is sent &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-23 Results}
+\end{longtable}
+
+\subsection{Test Scenario TS-24: Course Enrolment Requests Approval Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course enrolment requests are approved.
+\item On approval email is sent to the student.
+\item Students can view course details.
+
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Approval mail is sent &
+Approval mail is sent &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-24 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-25: Assign Courses Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User is logged in the system.
+\item User is identified and authenticated.
+\item Courses must be added.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Course is assigned successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Selected course get assigned to teacher and he can now manage that course &
+Selected course get assigned to teacher and he can now manage that course &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-25 Results}
+\end{longtable}
+
+
+
+\subsection{Test Scenario TS-26: View Students' Assignments Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+\item Course assignments uploaded.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Students assignments viewed successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Students assignment page shows all students assignment &
+Students assignment page shows all students assignment &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-26 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-27: Download Students' Assignments Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item Teacher is identified and authenticated.
+\item Teacher is logged in the system.
+\item Course is added.
+\item Teacher is assigned a course.
+\item Students have submitted the assignments.
+
+\end{itemize}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item Teacher downloaded the assignments successfully.
+
+\end{itemize}
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Assignment file downloaded successfully &
+Assignment file downloaded successfully &
+Haris &
+Pass \\
+\hline
+
+\caption{Web App: Test Scenario TS-27 Results}
+\end{longtable}
+
+
+\section{Offline Player Application}
+
+\subsection{Test Scenario TS-1: User Authentication Functionality}
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+\item User data successfully sent to server and token successfully saved in local database.
+\end{itemize}
+
+\bigskip
+
+\begin{longtable}{|p{1cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Test Case Id} & \textbf{Description} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+TC-1 &
+Enter Valid Credentials &
+Successful login &
+Successful login &
+Hamza &
+Pass \\
+\hline
+
+
+% Row 2
+TC-2 &
+Enter Invalid Email &
+Pop up message "Invalid email or password" &
+Pop up message "Invalid email or password" &
+Hamza &
+Pass \\
+\hline
+
+TC-3 &
+Enter Invalid Password &
+Pop up message "Invalid email or password" &
+Pop up message "Invalid email or password" &
+Hamza &
+Pass \\
+\hline
+
+
+
+TC-4 &
+Enter all invalid credentials &
+Pop up message "Invalid email or password" &
+Pop up message "Invalid email or password" &
+Hamza &
+Pass \\
+\hline
+
+
+
+
+\caption{Offline Player App: Test Scenario TS-1 Results}
+\end{longtable}
+
+
+\subsection{Test Scenario TS-2: View Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item All the downloaded and recently fetched lectures from website are shown in lecture play list.
+
+\end{itemize}
+
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Lectures view successfully &
+Lectures view successfully &
+Hamza &
+Pass \\
+\hline
+
+\caption{Offline Player App: Test Scenario TS-2 Results}
+\end{longtable}
+
+\subsection{Test Scenario TS-3: Play Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item All the downloaded and recently fetched lectures from website are shown in lecture play list.
+
+\end{itemize}
+
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Player screen opens and lecture start. &
+Player screen opens and lecture start. &
+Hamza &
+Pass \\
+\hline
+
+\caption{Offline Player App: Test Scenario TS-3 Results}
+\end{longtable}
+
+\subsection{Test Scenario TS-4: Download Lecture Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+\textbf{Post-Conditions: }
+\begin{itemize}
+
+\item Lecture is downloaded
+
+\end{itemize}
+
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Lecture downloaded successfully &
+Lecture downloaded successfully &
+Hamza &
+Pass \\
+\hline
+
+\caption{Offline Player App: Test Scenario TS-4 Results}
+\end{longtable}
+
+\subsection{Test Scenario TS-5: View About Page Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+About page opens &
+About page opens &
+Hamza &
+Pass \\
+\hline
+
+\caption{Offline Player App: Test Scenario TS-5 Results}
+\end{longtable}
+
+\subsection{Test Scenario TS-6: View Contact Us Page Functionality}
+
+\textbf{Pre-Conditions: }
+\begin{itemize}
+
+\item User must be authenticated.
+
+\end{itemize}
+
+
+
+\bigskip
+
+\begin{longtable}{|p{4cm}|p{4cm}|p{2cm}|p{2cm}|}
+\hline
+\textbf{Expected Result} & \textbf{Actual Result} & \textbf{Executed By} & \textbf{Status}\\
+\hline
+% Row 1
+Contact Us page opens &
+Contact Us page opens &
+Hamza &
+Pass \\
+\hline
+
+\caption{Offline Player App: Test Scenario TS-6 Results}
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
